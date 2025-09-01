@@ -11,7 +11,7 @@ builder.Services.AddSwaggerGen();
 
 // Use builder.Configuration directly instead of building a provider
 builder.Services.AddDbContext<AspWebApi.Models.WebApicrudContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("WebApiCrudConnectionString")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("dbcs")));
 
 var app = builder.Build();
 
